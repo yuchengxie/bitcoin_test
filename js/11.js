@@ -52,22 +52,20 @@ console.log('t:',t,t.length);
 let d=sha256.sha256(t);
 console.log(d);
 
-// let buf2=toBuffer(t);
-console.log('> t:',t,t.length);
 
 let encoder=bs58.encode(t);
-console.log('> encoder:',encoder,encoder.length);
+// console.log('> encoder:',encoder,encoder.length);
 
-let digest=sha256(encoder);
-console.log('> digest:',digest,digest.length);
-let digest2=sha256(digest);
-console.log('> digest2:',digest2,digest2.length);
-let checksum=digest2.substring(0,16);
-console.log('> checksum:',checksum,checksum.length);
-let pre=digest+checksum;
-console.log('> pre:',pre,pre.length);
-let code=bs58.encode(toBuffer(pre));
-console.log('> code:',code,code.length);
+// let digest=sha256(encoder);
+// console.log('> digest:',digest,digest.length);
+// let digest2=sha256(digest);
+// console.log('> digest2:',digest2,digest2.length);
+// let checksum=digest2.substring(0,16);
+// console.log('> checksum:',checksum,checksum.length);
+// let pre=digest+checksum;
+// console.log('> pre:',pre,pre.length);
+// let code=bs58.encode(toBuffer(pre));
+// console.log('> code:',code,code.length);
 
 
 function toBuffer(hex) {
@@ -80,7 +78,7 @@ function toBuffer(hex) {
 }
 
 
-let s='1118hfRMRrJMgSCoV9ztyPcjcgcMZ1zThvqRDLUw3xCYkZwwTAbJ5o'
+let s='1112gxQgmt8c6wztvtqLhR3QVoqgPWQpAqT62rQzGzE4AWUgEvTMka'
 console.log('s:',s,s.length);
 
 // let s1 = new ripemd160().update(Buffer.from(hash.substring(0, 32), 'hex')).digest();
